@@ -14,8 +14,8 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  def showSSS
-  
+  def show
+    @book = Book.find(params[:id])
   end
 
   private
