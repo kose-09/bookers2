@@ -11,9 +11,11 @@ class BooksController < ApplicationController
   end
 
   def index
+    @books = Book.all
   end
 
-  def show
+  def showSSS
+  
   end
 
   private
