@@ -1,9 +1,29 @@
 <div>
+  <h1>User info</h1>
+  <table>
+    <tr>
+      <td><%= image_tag @book.user.get_profile_image(100,100) %></td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td><%= @book.user.name %></td>
+    </tr>
+    <tr>
+      <td>Introduction</td>
+      <td><%= @book.user.introduction %></td>
+    </tr>
+  </table>
+  <% if @book.user == current_user %>
+    <%= link_to "edit", edit_user_path(@book.user.id) %>
+  <% end %>
+</div>
+
+<div>
   <p>Title: <%= @book.title %></p>
   <p>Opinion: <%= @book.body %></p>
   <% if @book.user == current_user %>
     <%= link_to "edit", edit_book_path(@book) %>
     <%= link_to "destroy", book_path(@book), method: :delete %>
   <% end %>
-  
+
 </div>
