@@ -1,0 +1,19 @@
+<div>
+  <h1>User info</h1>
+  <table>
+    <tr>
+      <td>
+        <%= image_tag current_user.get_profile_image(100,100) %>
+      </td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td><%= current_user.name %></td>
+    </tr>
+    <tr>
+      <td>Introduction</td>
+      <td><%= current_user.introduction %></td>
+    </tr>
+  </table>
+    <%= link_to "edit", edit_user_path(current_user.id) %>
+</div>
