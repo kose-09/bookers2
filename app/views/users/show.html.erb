@@ -1,7 +1,23 @@
-<%= render '/users/userinfo', user: @user %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="row m-1">
+        <%= render '/users/userinfo', user: @user %>
+      </div>
+      <div class="m-1">
+        <%= render '/books/new_book', book: @book %>
+      </div>
+    </div>
+    <div class="col-md-8 offset-1">
+      <%= render '/books/books', books: @books %>
+    </div>
+  </div>
+</div>
 
-<%= render '/books/new_book', book: @book %>
 
-<%= render '/books/books', books: @books %>
+
+
+
+
 
 
