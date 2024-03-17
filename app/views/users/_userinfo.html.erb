@@ -15,14 +15,10 @@
       <td><%= user.introduction %></td>
     </tr>
   </table>
-  <% if user == current_user %>
-    <div class="center-block">
-      <%= link_to(edit_user_path(user.id)) do %>
-        <button class="btn btn-secondary btn-lg">
-          <i class="fa-solid fa-user-gear mx-auto"></i>
-        </button>
-      <% end %>
-    </div>
-    
+  <%= link_to(edit_user_path(user.id)) do %>
+    <button class="btn btn-secondary btn-lg">
+      <i class="fa-solid fa-user-gear mx-auto"></i>
+    </button>
   <% end %>
+
 </div>

@@ -35,7 +35,7 @@ class UsersController < ApplicationController
  def is_matching_login_user
    user = User.find(params[:id])
    unless user == current_user
-     redirect_to users_path
+     redirect_to user_path(current_user.id)
    end
  end
 
