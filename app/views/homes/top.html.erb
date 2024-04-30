@@ -8,7 +8,10 @@
         about various books!
       </p>
       <div class="d-flex flex-column">
-        <div class="pb-2">
+        <div>
+          <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, class: "btn btn-secondary", method: :post %>
+        </div>
+        <div class="py-2">
           <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
         </div>
         <div>
