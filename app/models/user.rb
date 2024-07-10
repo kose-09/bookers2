@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_one_attached :profile_image
   
   has_many :favorites, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
   validates :name, length: { in: 2..20 }
   validates :name, uniqueness: true
