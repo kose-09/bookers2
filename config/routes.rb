@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resource :favorite, only: [:create, :destroy]
   end
   resources :users, only: [:show, :edit, :update, :index]
+  resources :notifications, only: [:update]
   
   devise_scope :user do
     post "users/guest_sign_in", to: "users/sessions#guest_sign_in"
